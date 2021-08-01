@@ -1,0 +1,685 @@
+<!-- ChatBot HTML with Python Script by T. Fujita on 2021/08/01 -->
+<!DOCTYPE html>
+<html>
+  <title>Index_EN.html for ChatBot by T. Fujita 2021/08/01</title>
+
+  <head>
+    <link rel="icon" type="image/x-icon" href="static/images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="static/css/bot.css" />
+    <link rel="stylesheet" type="text/css" href="static/css/dialog_001.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="static/js/encoding.min.js"></script>
+  </head>
+  <body>
+    <Center><h1>
+      <img src="/static/images/R_011_R.png" alt="CANDICE" style="width:50px;height:50px;vertical-align:bottom;"/>
+      Test for ChatBot
+      <img src="/static/images/R_012_R.png" alt="CANDICE" style="width:50px;height:50px;vertical-align:bottom;transform: scale(-1, 1);"/><br>
+      <div id="Selected_Model">
+        <span style="position:absolute; top:90px; left:30px; font-size: 20px;">Bot Name: Alice</span>
+      </div>
+      <div id="Speech_Flag">
+        <input type="button" class="normalButton" style="position:absolute; top:60px; left:45%; font-size: 20px; background-color: #ff0000; " value="Voice Input: OFF" onclick="OnButtonClick_01();">
+      </div>
+      <input type="button" class="normalButton" value="Setting" style="position:absolute; top:60px; right:30px; font-size: 20px;" onclick="Dialog_open_menu();"/>
+    </h1></Center>
+    <div class="box"></div>
+    <div class="boxed" style="position: absolute; top:120px; left:3%;">
+      <div>
+        <div id="chatbox">
+          <p class="botText">
+            <img src="./static/images/F021a_R.png" alt="BOT" style="width:50px;height:50px;vertical-align:bottom;"/>
+            <span>I am a chat bot. Will you talk to me?💖<br>
+            </span>
+          </p>
+        </div>
+        <div id="userInput">
+          <input id="textInput" type="text" name="msg" placeholder="Message" />
+        </div>
+      </div>
+    </div>
+
+<!-- Dialog_Menu -->
+<dialog dialog id="dialog_menu">
+    <center><font size="4" color="#fff">
+        Dialog (Menu)
+    </font></center>
+    <hr>
+    <nav class="nav">
+      <ul class="nav__menu"><font size="2">
+        <li class="nav__menu-item"><a>Informations</a>
+            <ul class="nav__submenu">
+                <li class="nav__submenu-item"> <a href="javascript: Dialog_open_information()">Information</a></li>
+                <li class="nav__submenu-item"> <a href="javascript: Dialog_open_manual()">Manual</a></li>
+                <li class="nav__submenu-item"> <a href="javascript: Dialog_open_profile()">Profile</a></li>
+            </ul>                
+        </li>
+        <li class="nav__menu-item"><a>Icon for Bot</a>
+            <ul class="nav__submenu">
+                <li class="nav__submenu-item"> <a href="javascript: Dialog_open_botIcon()">Select Icon</a></li>
+                <li class="nav__submenu-item"> <a href="javascript: Dialog_open_botFile()">From File</a></li>
+            </ul>
+        </li>
+        <li class="nav__menu-item"><a>Icon for User</a>
+            <ul class="nav__submenu">
+                <li class="nav__submenu-item"> <a href="javascript: Dialog_open_userIcon_Boy()">Boy's Icon</a></li>
+                <li class="nav__submenu-item"> <a href="javascript: Dialog_open_userIcon_Girl()">Girl's Icon</a></li>
+                <li class="nav__submenu-item"> <a href="javascript: Dialog_open_userFile()">From File</a></li>
+            </ul>
+        </li>
+
+      </font></ul>
+    </nav>
+    <input type="button" class="rightButton" value="CLOSE" onclick="Dialog_close_menu()">
+</dialog>
+
+<!-- Dialog Box for Information -->
+<dialog dialog id="dialog_information">
+    <center>
+        Dialog (Informations)
+    </center>
+    <hr>
+- This is an information window.<br>
+- You can select the icon for ChatBot or for user.<br><br>
+- Also, you can watch my profile.<br><br>
+    <hr>
+    <input type="button" class="rightButton" value="CLOSE" onclick="Dialog_close_information()">
+</dialog>
+
+<!-- Dialog Box for Manual -->
+<dialog dialog id="dialog_manual">
+    <center>
+        Dialog (Manual)
+    </center>
+    <hr>
+    <center>
+    <textarea rows="10" cols="50" readonly style="resize: none; width:480px; height:250px; text-align: left;">
+- If you say the "End of the voice input." or "Terminate the voice input.", then voice recognition is terminated.
+    </textarea>
+    </center>
+    <hr>
+    <input type="button" class="rightButton" value="CLOSE" onclick="Dialog_close_manual()">
+</dialog>
+
+<!-- Dialog Box for Profile -->
+<dialog dialog id="dialog_profile">
+    <center>
+        Dialog (Profile)
+    </center>
+    <hr>
+    <div class="profile_wrapper">
+        <div class="card">
+            <div class="me">
+                <div class="eye"></div>
+            </div>
+            <div class="text">
+                 HAL bou
+            </div>
+        </div>
+    </div>
+    <input type="button" class="rightButton" value="CLOSE" onclick="Dialog_close_profile()">
+</dialog>
+
+<!-- Select Bot Icon -->
+<dialog dialog id="dialog_botIcon">
+    <center>
+        Dialog (Select Bot Icon)
+    </center>
+    <hr>
+    <div class="radiobutton">
+        <input type="radio" id="radio1" name="Dialog_radio_bot" value="/static/images/F021a_R.png" checked>
+        <label for="radio1">　<img border="1" src="/static/images/F021a_R.png" width="64" height="64" alt="image_1"></label><br>
+        <input type="radio" id="radio2" name="Dialog_radio_bot" value="/static/images/R_011_R.png">
+        <label for="radio2">　<img border="1" src="/static/images/R_011_R.png" width="64" height="64" alt="image_2"></label><br>
+        <input type="radio" id="radio3" name="Dialog_radio_bot" value="/static/images/R_012_R.png">
+        <label for="radio3">　<img border="1" src="/static/images/R_012_R.png" width="64" height="64" alt="image_3"></label><br>
+    </div>
+    <hr>
+    <div class="radiobutton_mid" style="top: -238px;">
+        <input type="radio" id="radio4" name="Dialog_radio_bot" value="/static/images/R_014_R.png">
+        <label for="radio4">　<img border="1" src="/static/images/R_014_R.png" width="64" height="64" alt="image_4"></label><br>
+        <input type="radio" id="radio5" name="Dialog_radio_bot" value="/static/images/R_015_R.png">
+        <label for="radio5">　<img border="1" src="/static/images/R_015_R.png" width="64" height="64" alt="image_5"></label><br>
+    </div>
+    <input type="button" class="leftButton" value="CANCEL" onclick="Dialog_cancel_botIcon()">           
+    <input type="button" class="rightButton" value=" OK " onclick="Dialog_close_botIcon()">
+</dialog>
+
+<!-- Select User Icon Boy -->
+<dialog dialog id="dialog_userIcon_Boy">
+    <center>
+        Dialog (Select User Icon/Boy)
+    </center>
+    <hr>
+    <div class="radiobutton">
+        <input type="radio" id="radio11" name="Dialog_radio_user_Boy" value="/static/images/M004_La.png" checked>
+        <label for="radio11">　<img border="1" src="/static/images/M004_La.png" width="64" height="64" alt="image_1"></label><br>
+        <input type="radio" id="radio12" name="Dialog_radio_user_Boy" value="/static/images/M008_L.png">
+        <label for="radio12">　<img border="1" src="/static/images/M008_L.png" width="64" height="64" alt="image_2"></label><br>
+        <input type="radio" id="radio13" name="Dialog_radio_user_Boy" value="/static/images/M011_L.png">
+        <label for="radio13">　<img border="1" src="/static/images/M011_L.png" width="64" height="64" alt="image_3"></label><br>
+    </div>
+    <hr>
+    <div class="radiobutton_mid" style="top: -238px;">
+        <input type="radio" id="radio14" name="Dialog_radio_user_Boy" value="/static/images/M012_L.png">
+        <label for="radio14">　<img border="1" src="/static/images/M012_L.png" width="64" height="64" alt="image_4"></label><br>
+        <input type="radio" id="radio15" name="Dialog_radio_user_Boy" value="/static/images/M026_La.png">
+        <label for="radio15">　<img border="1" src="/static/images/M026_La.png" width="64" height="64" alt="image_5"></label><br>
+    </div>
+    <input type="button" class="leftButton" value="CANCEL" onclick="Dialog_cancel_userIcon_Boy()">           
+    <input type="button" class="rightButton" value=" OK " onclick="Dialog_close_userIcon_Boy()">
+</dialog>
+
+<!-- Select User Icon Girl -->
+<dialog dialog id="dialog_userIcon_Girl">
+    <center>
+        Dialog (Select User Icon/Girl)
+    </center>
+    <hr>
+    <div class="radiobutton">
+        <input type="radio" id="radio21" name="Dialog_radio_user_Girl" value="/static/images/F003_L.png" checked>
+        <label for="radio21">　<img border="1" src="/static/images/F003_L.png" width="64" height="64" alt="image_1"></label><br>
+        <input type="radio" id="radio22" name="Dialog_radio_user_Girl" value="/static/images/F007_L.png">
+        <label for="radio22">　<img border="1" src="/static/images/F007_L.png" width="64" height="64" alt="image_2"></label><br>
+        <input type="radio" id="radio23" name="Dialog_radio_user_Girl" value="/static/images/F014_L.png">
+        <label for="radio23">　<img border="1" src="/static/images/F014_L.png" width="64" height="64" alt="image_3"></label><br>
+    </div>
+    <hr>
+    <div class="radiobutton_mid" style="top: -238px;">
+        <input type="radio" id="radio24" name="Dialog_radio_user_Girl" value="/static/images/F019_L.png">
+        <label for="radio24">　<img border="1" src="/static/images/F019_L.png" width="64" height="64" alt="image_4"></label><br>
+        <input type="radio" id="radio25" name="Dialog_radio_user_Girl" value="/static/images/F047_L.png">
+        <label for="radio25">　<img border="1" src="/static/images/F047_L.png" width="64" height="64" alt="image_5"></label><br>
+    </div>
+    <input type="button" class="leftButton" value="CANCEL" onclick="Dialog_cancel_userIcon_Girl()">           
+    <input type="button" class="rightButton" value=" OK " onclick="Dialog_close_userIcon_Girl()">
+</dialog>
+
+<!-- Icon Load form File -->
+<dialog dialog id="dialog_imageFile">
+    <center>
+        Dialog (File Input Image File)
+    </center>
+    <hr>
+    <span id="image_File" style="font-size: 16px;">Select the icon for ChatBot: </span>
+    <form name="photoinput_image">
+        <center>　
+            <input type="file" accept="image/*" name="select_imageFile" id="select_imageFile" value="" onchange="updateImageDisplay_File()">
+            <div class="preview">
+                <p>Photo File is not selected.</p>
+            </div>
+        </center>
+    </form>
+    <input type="button" class="leftButton" value="CANCEL" onclick="Dialog_cancel_imageFile()">           
+    <input type="button" class="rightButton" value=" OK " onclick="Dialog_close_imageFile()">
+</dialog>
+
+<!-- Dialog Box for Dummy -->
+<dialog dialog id="dialog_dummy">
+    <center>
+        Dialog (Dummy)
+    </center>
+    <hr>
+- This is a dummy window.<br>
+    <br><br>
+    <br><br>
+    <hr>
+    <input type="button" class="rightButton" value="CLOSE" onclick="Dialog_close_dummy()">
+</dialog>
+
+
+    <script>
+        let bot_icon = "/static/images/F021a_R.png"
+        let user_icon = "/static/images/M008_L.png"
+        let Speak = document.getElementById('Speech_Flag');
+        let Flag_Speech = 0;
+        let image;
+        let image_Flag = 0;
+        let File_Input_Title = document.getElementById('image_File');
+        const uttr = new SpeechSynthesisUtterance();
+
+        SpeechRecognition = webkitSpeechRecognition || SpeechRecognition;
+        let recognition = new SpeechRecognition();
+        recognition.lang = 'en-US';
+        recognition.interimResults = false;
+        recognition.continuous = true;
+        
+
+// Set the ChatBot Name
+        $(document).ready(function(){
+            var model_name = document.getElementById('Selected_Model');
+            var selected_model = '';
+           
+            $.get("/get_Model", { sel_Model: 'Set Model Name' }).done(function( data ) {
+                selected_model = data;
+                if (selected_model == 'All_Tasks_mt') {
+                    model_name.innerHTML = '<span style="position:absolute; top:90px; left:30px; font-size: 20px;">Bot Name: All_Tasks_mt</span>'
+                }
+                else if (selected_model == 'Blender_90M') {
+                    model_name.innerHTML = '<span style="position:absolute; top:90px; left:30px; font-size: 20px;">Bot Name: Blender_90M</span>'
+                }
+                else if (selected_model == 'Blender_400M') {
+                    model_name.innerHTML = '<span style="position:absolute; top:90px; left:30px; font-size: 20px;">Bot Name: Blender_400M</span>'
+                }
+                else {
+                    model_name.innerHTML = '<span style="position:absolute; top:90px; left:30px; font-size: 20px;">Bot Name: Alice</span>'
+                }
+            }).fail(function(){
+                alert('failed');
+            });
+        });
+
+
+// Setting the Voice Input
+        function OnButtonClick_01() {
+            if (Flag_Speech == 1) {
+                Flag_Speech = 0;
+                Speak.innerHTML = '<input type="button" class="normalButton" style="position:absolute; top:60px; left:45%; font-size: 20px; background-color: #ff0000;" value="Voice Input: OFF" onclick="OnButtonClick_01();">';
+                recognition.stop();
+            }
+            else {
+                Flag_Speech = 1;
+                Speak.innerHTML = '<input type="button" class="normalButton" style="position:absolute; top:60px; left:45%; font-size: 20px;" value="Voice Input: ON " onclick="OnButtonClick_01();">';
+                recognition.start();
+            }
+        }
+
+// Communicate with Python
+        function getBotResponse() {
+          var rawText = $("#textInput").val();
+          var userHtml = '<p class="userText"><span>' + rawText + 
+            '</span><img src=' + user_icon + ' alt="USER" style="width:50px;height:50px;vertical-align:bottom;"/></p>';
+          $("#textInput").val("");
+          $("#chatbox").append(userHtml);
+          document.getElementById("userInput").scrollIntoView({ block: "start", behavior: "smooth" });
+          $.get("/get", { msg: rawText }).done(function(data) {
+            var Temp = data.replace(/\n/g, '<br>');
+            var botHtml = '<p class="botText"><img src=' + bot_icon + ' alt="BOT" style="width:50px;height:50px;vertical-align:bottom;"/><span>' + Temp + '</span></p>';
+            $("#chatbox").append(botHtml);
+            speech(data);
+            if (data == 'Terminated the voice recognition.') {
+                Flag_Speech = 0;
+                Speak.innerHTML = '<input type="button" class="normalButton" style="position:absolute; top:60px; left:45%; font-size: 20px; background-color: #ff0000;" value="Voice Input: OFF" onclick="OnButtonClick_01();">';
+                recognition.stop();
+            }
+
+            document.getElementById("userInput").scrollIntoView({ block: "start", behavior: "smooth" });
+            if (Flag_Speech == 1 && !speechSynthesis.speaking){
+                recognition.start();
+            }
+          });
+        }
+
+// Talk
+        function speech(answer) {
+          if (Flag_Speech == 0) {return;}
+          recognition.stop();
+          uttr.lang = "en-US"  
+          uttr.text = answer;
+          uttr.rate = 1.0;
+          uttr.pitch = 1.0;
+          speechSynthesis.speak(uttr);
+        }
+
+// Voice Recognition
+        recognition.onresult = (event) => {
+          let interimTranscript = ''; 
+          let finalTranscript = '';
+          let question = '';
+          if (speechSynthesis.speaking) {
+            recognition.stop();
+            answer = null;
+            return;
+          }      
+          for (let i = event.resultIndex; i < event.results.length; i++) {
+            if (event.results[i].isFinal) {
+              finalTranscript = event.results[i][0].transcript;
+            } else {
+              interimTranscript = '';
+            }
+          }
+          question = finalTranscript;
+          if (question.length > 0) {
+            if (question != undefined) {
+              document.getElementById("textInput").value = question;
+              getBotResponse();
+            }
+          }        
+        }
+
+        recognition.onend = (event) => {
+            if (Flag_Speech != 0) {
+                setTimeout(confirm(), 3000);
+            } 
+        }
+
+        function confirm() {
+            if ( ( !recognition.onspeechstart ) && ( !speechSynthesis.speaking ) ) { 
+                Flag_Speech = 0;
+                Speak.innerHTML = '<input type="button" class="normalButton" style="position:absolute; top:60px; left:45%; font-size: 20px; background-color: #ff0000;" value="Voice Input: OFF" onclick="OnButtonClick_01();">';
+                recognition.stop();
+            } else if ( speechSynthesis.speaking ) {
+                recognition.stop();
+            } else {
+                Flag_Speech = 1;
+                Speak.innerHTML = '<input type="button" class="normalButton" style="position:absolute; top:60px; left:45%; font-size: 20px;" value="Voice Input: ON " onclick="OnButtonClick_01();">';               
+                recognition.start();
+            }
+        }
+
+        uttr.start = (event) => {
+            recognition.stop();
+        }
+
+        uttr.onend = (event) => {  
+            if (Flag_Speech == 1) {
+                recognition.start();    
+          } 
+        }        
+
+// at the Return Key Input
+        $("#textInput").keypress(function(e) {
+          if (e.which == 13) {
+            getBotResponse();
+          }
+        });
+
+// for Dialog Box
+        function Dialog_open_menu() {
+            dialog_menu.showModal();
+        }
+        function Dialog_close_menu() {
+            dialog_menu.close();
+        }
+
+        function Dialog_open_manual() {
+            dialog_menu.close();
+            dialog_manual.showModal();
+        }
+        function Dialog_close_manual() {
+            dialog_manual.close();
+        }
+
+        function Dialog_open_information() {
+            dialog_menu.close();
+            dialog_information.showModal();
+        }
+        function Dialog_close_information() {
+            dialog_information.close();
+        }
+
+        function Dialog_open_profile() {
+            dialog_menu.close();
+            dialog_profile.showModal();
+        }
+        function Dialog_close_profile() {
+            dialog_profile.close();
+        }
+
+// for Profile Wrapper
+        var $wrap = $('.profile_wrapper'),
+            $lEye = $('.eye'),
+            lFollowX = 5,
+            lFollowY = 10,
+            x = 0,
+            y = 0,
+            friction = 1 / 12;
+
+        function animate() {
+            x += (lFollowX - x) * friction;
+            y += (lFollowY - y) * friction;
+            $lEye.css({
+                '-webit-transform': 'translate(' + -x + 'px, ' + -y + 'px)',
+                '-moz-transform': 'translate(' + -x + 'px, ' + -y + 'px)',
+                'transform': 'translate(' + -x + 'px, ' + -y + 'px)' 
+            });
+            $wrap.css({
+                'transform': 'translate(-50%, -50%) perspective(600px) rotateY(' + -x + 'deg) rotateX(' + y + 'deg)' 
+            });
+            window.requestAnimationFrame(animate);
+        }
+
+        $(window).on('mousemove click', function (e) {
+            var lMouseX = Math.max(-100, Math.min(100, $(window).width() / 2 - e.clientX));
+            var lMouseY = Math.max(-100, Math.min(100, $(window).height() / 2 - e.clientY));
+            lFollowX = 12 * lMouseX / 100;          // 100 : 12 = lMouxeX : lFollow
+            lFollowY = 10 * lMouseY / 100;
+        });
+        animate();
+
+// Select Bot Icon
+        function Dialog_open_botIcon() {
+            dialog_menu.close();
+            dialog_botIcon.showModal();
+        }
+        function Dialog_cancel_botIcon() {
+            dialog_botIcon.close();
+        }
+        function Dialog_close_botIcon() {
+            var elements = document.getElementsByName('Dialog_radio_bot');
+            var len = elements.length;
+            var checkValue = '';
+
+            for (let i = 0; i < len; i++){
+                if (elements.item(i).checked){
+                    checkValue = elements.item(i).value;
+                }
+            }
+            bot_icon = checkValue;
+            dialog_botIcon.close();
+        }
+
+// Select User Icon (Boy)
+        function Dialog_open_userIcon_Boy() {
+            dialog_menu.close();
+            dialog_userIcon_Boy.showModal();
+        }
+        function Dialog_cancel_userIcon_Boy() {
+            dialog_userIcon_Boy.close();
+        }
+        function Dialog_close_userIcon_Boy() {
+            var elements = document.getElementsByName('Dialog_radio_user_Boy');
+            var len = elements.length;
+            var checkValue = '';
+
+            for (let i = 0; i < len; i++){
+                if (elements.item(i).checked){
+                checkValue = elements.item(i).value;
+                }
+            }
+            user_icon = checkValue;
+            dialog_userIcon_Boy.close();
+        }
+
+// Select User Icon (Girl)
+        function Dialog_open_userIcon_Girl() {
+            dialog_menu.close();
+            dialog_userIcon_Girl.showModal();
+        }
+        function Dialog_cancel_userIcon_Girl() {
+            dialog_userIcon_Girl.close();
+        }
+        function Dialog_close_userIcon_Girl() {
+            var elements = document.getElementsByName('Dialog_radio_user_Girl');
+            var len = elements.length;
+            var checkValue = '';
+
+            for (let i = 0; i < len; i++){
+                if (elements.item(i).checked){
+                    checkValue = elements.item(i).value;
+                }
+            }
+            user_icon = checkValue;
+            dialog_userIcon_Girl.close();
+        }
+
+        function Dialog_open_botFile() {
+            image_Flag = 0;
+            File_Input_Title.innerHTML = "File Select for the ChatBot: ";
+            dialog_menu.close();
+            dialog_imageFile.showModal();
+        }
+
+        function Dialog_open_userFile() {
+            image_Flag = 1;
+            File_Input_Title.innerHTML = "File Select for the User: ";
+            dialog_menu.close();
+            dialog_imageFile.showModal();
+        }
+
+        function Dialog_close_imageFile() {
+            if (image_Flag == 0) {
+                bot_icon = image.src;
+            }
+            else {
+                user_icon = image.src;
+            }
+            dialog_imageFile.close();
+        }
+        function Dialog_cancel_imageFile() { 
+            dialog_imageFile.close();
+        }
+// Load Image File
+        function updateImageDisplay_File() {
+            var preview = document.querySelector('.preview');
+            var file_input = $('#select_imageFile');
+            var file = file_input[0].files[0];
+            var para = document.createElement('p');
+            if(file === undefined) {
+                para.textContent = 'Photo File is not selected!';
+                preview.removeChild(preview.childNodes.item(0));
+                preview.appendChild(para);
+            } else {
+                while(preview.firstChild){
+                    preview.removeChild(preview.firstChild);
+                }
+                preview.appendChild(para);
+                image = document.createElement('img');
+                image.src = window.URL.createObjectURL(file);
+                preview.appendChild(image);
+            }
+        }
+// Load CSV Data
+        var CSV_Temp_Data = "";
+        var CSV_Data = "";
+        var Text_Box_CSV = document.getElementById('dialog_DSP')
+        function Dialog_open_CSV_Load() {
+            dialog_menu.close();
+            dialog_CSV_Load.showModal();
+            Dialog_CSV_Data_Load();
+        }
+        function Dialog_cancel_CSV_Load() {
+            dialog_CSV_Load.close();
+        }
+        function Dialog_close_CSV_Load_New() {
+            CSV_Data = CSV_Temp_Data;
+            $.get("/get_New", { new_CSV: CSV_Data }).done(function( data ) {
+                var temp = data;
+            }).fail(function(){
+            alert('failed');
+            });
+            dialog_CSV_Load.close();
+        }
+        function Dialog_close_CSV_Load_Add() {
+            CSV_Data = CSV_Temp_Data;
+            $.get("/get_Add", { add_CSV: CSV_Data }).done(function( data ) {
+                var temp = data;
+            }).fail(function(){
+                alert('failed');
+            });
+            dialog_CSV_Load.close();
+        }
+        function Dialog_CSV_Data_Load() {
+            var select = document.getElementById('dialog_CSV');
+            var output_csv = document.getElementById('dialog_CSV_DSP');
+            select.value = "";
+            output_csv.innerHTML = "";
+            if(window.File) {
+                select.addEventListener('change', function(e) {
+                    var fileData = e.target.files[0];
+                    var reader = new FileReader();
+                    reader.onerror = function() {
+                        alert('Faild at reading!')
+                    }
+                    reader.onload = function(event) {
+                        var tmp = new Uint8Array(event.target.result);
+                        var tmp_text = Encoding.convert(tmp, 'UNICODE', 'AUTO');
+                        CSV_Temp_Data = Encoding.codeToString(tmp_text);
+                        var insertElement = CSV_Temp_Data.replace(/\n/g, '<br>')
+                        output_csv.innerHTML = insertElement;
+                    }
+                    reader.readAsArrayBuffer(fileData);
+                }, false);
+            }
+        }
+// Save CSV Data
+        var Save_CSV_SJIS = new Array();
+        var dialog_CSV_Save_SJIS = document.getElementById('dialog_CSV_Save_SJIS');
+        function Dialog_open_CSV_Save() {
+            dialog_menu.close();
+            dialog_CSV_Save.showModal();
+            $.get("/get_Save", { save_CSV: "CSV_Save" }).done(function( data ) {
+                Save_CSV_SJIS = data;
+                var insertElement = Save_CSV_SJIS.replace(/\n/g, "<br>");
+                dialog_CSV_Save_SJIS.innerHTML = insertElement;
+            }).fail(function(){
+            alert('failed');
+            });
+        }
+        function Dialog_cancel_CSV_Save() {
+            dialog_CSV_Save.close();
+        }
+        function Dialog_close_CSV_Save() {
+            CSV_Data_Save_SJIS()
+            dialog_CSV_Save.close();
+        }
+        function CSV_Data_Save_SJIS() {
+            var content = Save_CSV_SJIS;
+            var strArray = Encoding.stringToCode(content);
+            var convertedArray = Encoding.convert(strArray, 'SJIS', 'UNICODE');
+            var UintArray = new Uint8Array(convertedArray);
+            var blob = new Blob([UintArray], { type: 'text/csv' });
+            if (window.navigator.msSaveBlob) { 
+                window.navigator.msSaveBlob(blob, "Talk_Data.csv"); 
+                // msSaveOrOpenBlobの場合はファイルを保存せずに開ける
+                window.navigator.msSaveOrOpenBlob(blob, "Talk_Data.csv"); 
+            } else {
+                document.getElementById("csv_download_SJIS").href = window.URL.createObjectURL(blob);
+            }
+        }
+
+        function Dialog_open_dummy() {
+            dialog_menu.close();
+            dialog_dummy.showModal();            
+        }
+        function Dialog_close_dummy() {
+            dialog_dummy.close();            
+        }
+
+// Show Wikipedia
+        var wiki_flag = 0;
+        var wiki_search = document.getElementById('Wiki_Search')
+        function Wiki_Flag() {
+            if (wiki_flag == 0) {
+                wiki_flag = 1;
+                wiki_search.innerHTML = '<input type="button" class="normalButton" style="position:absolute; top:60px; left:3%; font-size: 20px; background-color:#ff0000;" value="検索結果の詳細：　表示" onclick="Wiki_Flag();">';
+            } else {
+                wiki_flag = 0;
+                wiki_search.innerHTML = '<input type="button" class="normalButton" style="position:absolute; top:60px; left:3%; font-size: 20px;" value="検索結果の詳細：非表示" onclick="Wiki_Flag();">';
+            }
+        }
+        function Dialog_open_wiki(temp) {
+            if (temp == "" || wiki_flag == 0) {
+                return
+            }
+            show_HTML = document.getElementById("show_wiki");
+            show_HTML.innerHTML = '<iframe src="https://ja.wikipedia.org/wiki/' + temp + '" width="750px" height="420px" style="position:relative; top:-84px; left:-127px; transform:scale(0.66);"></iframe>';
+            dialog_wiki.showModal();
+        }
+        function Dialog_close_wiki() {
+            dialog_wiki.close();
+        }
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,274 @@
+/* CSS for Dialog Box 2021/06/24 by T. Fujita */
+/* for Dialog Box */
+            dialog {
+                padding: 0;
+                border: 1px solid #eee;
+                box-shadow: 1px 1px 2px #333;
+                position: relative;
+                width: 500px;
+                height: 400px;
+                overflow: hidden;
+                background-color: #bcbcff;
+                font-size: 24px;
+            }
+        
+            dialog[open]{
+                animation: fade 1s ease 0s 1 normal;
+            }
+
+            .rightButton{
+                background-color: #0004ff;
+                text-align: center;
+                margin: 10px auto 20px auto;
+                padding: 10px;
+                border-radius: 4px;
+                font-weight: bold;
+                color: #fff;
+                box-shadow: 0px 1px 3px #8bb8fa;
+                cursor: pointer;
+                position:absolute;
+                right: 20px;
+                bottom: 2px;
+                opacity: 1;
+            }
+            .leftButton{
+                background-color: #b80000;
+                text-align: center;
+                margin: 10px auto 20px auto;
+                padding: 10px;
+                border-radius: 4px;
+                font-weight: bold;
+                color: #fff;
+                box-shadow: 0px 1px 3px rgb(83, 0, 0);
+                cursor: pointer;
+                position:absolute;
+                left: 20px;
+                bottom: 2px;
+                opacity: 1;
+            }
+            .normalButton{
+                background-color: #005005;
+                text-align: center;
+                margin: 10px auto 20px auto;
+                padding: 10px;
+                border-radius: 4px;
+                font-weight: bold;
+                color: #fff;
+                box-shadow: 0px 1px 3px rgb(4, 109, 0);
+                cursor: pointer;
+                opacity: 1;
+                position: relative;
+            }
+
+/* Inside for Dialog Box */
+            nav ul {
+                list-style: none;
+                padding-left: 0;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            
+            .nav {
+                width: 500px;
+                margin: 0 auto;
+                background: #8080ff;
+                color: #f0f0f0;
+            }
+            .nav a {
+                display: block;
+                padding: 0 8px;
+                line-height: inherit;
+                color: #fff;
+                cursor: pointer;
+                font-size: 16px;
+            }
+            .nav__menu {
+                line-height: 45px;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+            .nav__menu-item {
+                display: inline-block;
+                position: relative;
+            }
+            .nav__menu-item:hover {
+                background-color: #4040ff;
+            }
+            .nav__menu-item:hover .nav__submenu {
+                display: block;
+            }
+            .nav__submenu {
+                font-weight: 300;
+                text-transform: none;
+                display: none;
+                position: absolute;
+                width: 132px;
+                background-color: #4040ff;
+            }
+            .nav__submenu-item:hover {
+                background: #0000ff;
+            }
+
+/*-------------------- profile_wrapper --------------------*/
+            .profile_wrapper {
+                position: absolute;
+                top: 64%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 295px;
+                height: 438px;
+                font-family: "Source Sans Pro", sans-serif;
+                transform-style: preserve-3d;
+                transform: translate(-50%, -50%) perspective(600px) rotateY(20deg) rotateX(10deg);
+            }
+            
+/*-------------------- Me --------------------*/
+            .me {
+                position: relative;
+                width: 295px;
+                height: 438px;
+                transform: translateZ(80px) scale(0.8);
+            }
+            .me::before, .me::after {
+                content: "";
+                position: absolute;
+                width: 80%;
+                height: 80%;
+                top: 20;
+                left: 0;
+                border-radius: 10px;
+                background: url("../images/HAL_a.png") no-repeat 0 0;
+                background-size: 100%;
+            }
+            .me::after {
+                height: 30px;
+                top: auto;
+                bottom: -15px;
+                z-index: -1;
+                filter: blur(15px);
+                background-size: 100% 30px;
+                border-radius: 100px;
+            }
+            .me .eye, .me .eye::before {
+                width: 70px;
+                height: 70px;
+                position: absolute;
+                top: 155px;
+                left: 60px;
+                z-index: -1;
+                background: url("../images/eye_a.png") no-repeat center;
+                background-size: 80%;
+            }
+            .me .eye::before {
+                content: "";
+                top: 2px;
+                left: 66px;
+            }
+            
+            .text {
+                position: absolute;
+                top: -7%;
+                left: -7%;
+                z-index: 2;
+                width: 312px;
+                height: 476px;
+                transform: translateZ(150px) translateX(-11px) translateY(-26px) scale(0.55);
+                border: 3px solid white;
+                text-align: center;
+                font-size: 48px;
+                line-height: 800px;
+                color: rgb(255, 255, 255);
+                background: linear-gradient(135deg, white 0%, rgba(255, 255, 255, 0.36) 39%, rgba(255, 255, 255, 0.07) 41%, rgba(255, 255, 255, 0) 51%, black 100%);
+                opacity: 0.4;
+                border-radius: 8px;
+            }
+            .text::after {
+                content: "by T. Fujita";
+                width: 100%;
+                position: absolute;
+                bottom: 22px;
+                left: 0;
+                width: 100%;
+                z-index: 1;
+                line-height: 1;
+                font-size: 18px;
+                text-align: center;
+                text-transform: uppercase;
+                letter-spacing: 8px;
+                text-indent: 20px;
+            }
+
+/* Style for Radio Button */
+            .radiobutton {
+	            position: relative;
+                left: 50px;
+            }
+            .radiobutton label {
+	            padding: 0 0 0 24px;	/* ラベルの位置 */
+	            font-size: 24px;
+	            line-height: 28px;		/* ボタンのサイズに合わせる */
+	            display: inline-block;
+	            cursor:	pointer;
+	            position: relative;
+            }
+            .radiobutton label:before {
+	            content: '';
+	            width: 28px;		/* ボタンの横幅 */
+	            height: 28px;		/* ボタンの縦幅 */
+	            position: absolute;
+	            top: 0;
+	            left: 0;
+	            background-color: #00f;
+	            border-radius: 50%;
+            }
+            .radiobutton input[type="radio"] {
+	            display: none;
+            }
+            .radiobutton input[type="radio"]:checked + label:after {
+	            content: '';
+	            width: 10px;		/* マークの横幅 */
+	            height: 10px;		/* マークの縦幅 */
+	            position: absolute;
+	            top: 9px;
+	            left: 9px;
+	            background-color: #fff;
+	            border-radius: 50%;
+            }           
+            .radiobutton_mid {
+	            position: relative;
+                left: 250px;
+            }
+            .radiobutton_mid label {
+	            padding: 0 0 0 24px;	/* ラベルの位置 */
+	            font-size: 24px;
+	            line-height: 28px;		/* ボタンのサイズに合わせる */
+	            display: inline-block;
+	            cursor:	pointer;
+	            position: relative;
+            }
+            .radiobutton_mid label:before {
+	            content: '';
+	            width: 28px;		/* ボタンの横幅 */
+	            height: 28px;		/* ボタンの縦幅 */
+	            position: absolute;
+	            top: 0;
+	            left: 0;
+	            background-color: #00f;
+	            border-radius: 50%;
+            }
+            .radiobutton_mid input[type="radio"] {
+	            display: none;
+            }
+            .radiobutton_mid input[type="radio"]:checked + label:after {
+	            content: '';
+	            width: 10px;		/* マークの横幅 */
+	            height: 10px;		/* マークの縦幅 */
+	            position: absolute;
+	            top: 9px;
+	            left: 9px;
+	            background-color: #fff;
+	            border-radius: 50%;
+            }           
+            .preview img {
+                width: 128px;
+            }
