@@ -31,6 +31,8 @@ Please put the unzipped folders under the system pass passed.
 
 ## 5. Reference
 - [Facebookresearch/ParlAI](https://github.com/facebookresearch/parlai)
+- [Visual Studio Code](https://azure.microsoft.com/en-us/products/visual-studio-code/)
+- [Python](https://www.python.org/)
 
 ## 6. License
 MIT
