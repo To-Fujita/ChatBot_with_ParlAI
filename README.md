@@ -35,7 +35,7 @@ After open the "ChatBot_with_ParlAI" folder, please open the each following file
 - confirm_Blender_400M.py
 
 At the VS Code, Click the "Run" and the "Start Debugging" or the "Run Without Debugging" with one by one. 
-If these scripts are not working, please check your setting for system pass. You can set for your system pass in each files.  
+If these scripts are not working well, please check your setting for system pass. You can set for your system pass in each files.  
 If you want to try the other agents/models in ParlAI, please refer to [Standard Agents in ParlAI Document](https://parl.ai/docs/agents_list.html).  
 
 ### 4-3. Try to communicate with the chat bot
