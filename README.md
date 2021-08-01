@@ -29,16 +29,28 @@ Please put these unzipped folders under the system pass passed.
 ### 4-2. Confirm to work some agents/models in ParlAI
 If you finished the preparation above, please confirm to work some agents/models in ParlAI.  
 After open the "ChatBot_with_ParlAI" folder, please open the each following files with VS Code.
-- confirm_Alice.py
-- confirm_All_Tasks_mt.py
-- confirm_Blender_90M.py
+- confirm_Alice.py: The ALICE bot is a strong rule-based bot uing AIML.
+- confirm_All_Tasks_mt.py: One of Dodeca models in Zoo, please refer to [Model Zoo](https://parl.ai/docs/zoo.html)
+- confirm_Blender_90M.py: Blended Skill Talk models in Zoo, please refer to [Model Zoo](https://parl.ai/docs/zoo.html)
 - confirm_Blender_400M.py
 
-Then, Click the "Run" and the "Start Debugging" or the "Run Without Debugging" with one by one. 
+At the VS Code, Click the "Run" and the "Start Debugging" or the "Run Without Debugging" with one by one. 
 If these scripts are not working, please check your setting for system pass. You can set for your system pass in each files.  
 If you want to try the other agents/models in ParlAI, please refer to [Standard Agents in ParlAI Document](https://parl.ai/docs/agents_list.html).  
 
 ### 4-3. Try to communicate with the chat bot
+The Chat Bot programs are as follows.
+- main_Alice.py
+- main_All_Tasks_mt.py
+- main_Blender_90M.py
+- main_Blender_400M.py
+
+This Chat Bot is created in following concepts.
+- The human interface is given in HTML and Javascript.
+- The answer from the chat bot is created in Python.
+
+In this time, I used the "Dialog Element" in HTML. The Safari and the FireFox are not supported for the Dialog Element, yet. Then, it is not working well by the Safari and the Firefox.
+Please enjoy the communication with the chat bot on the Microsoft Edge or the Google Chrome.
 
 ## 5. Reference
 - [Facebookresearch/ParlAI](https://github.com/facebookresearch/parlai)
