@@ -17,7 +17,8 @@ I have confirmed these Python Scripts on the above conditions only. I will show 
 ### 4-1. Preparation
 (a) Download & unzip the files
 - [ParlAI](https://github.com/facebookresearch/parlai): A framework for training and evaluating AI models on a variety of openly available dialogue datasets.
-- ChatBot_with_ParlAI: Please download from above "Code".  
+- ChatBot_with_ParlAI: Please download from above "Code".
+
 Please put these unzipped folders under the system pass passed.   
   
 (b) Install some files to your Python
