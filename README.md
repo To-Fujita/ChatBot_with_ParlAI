@@ -31,8 +31,8 @@ After open the "ChatBot_with_ParlAI" folder, please open the each following file
 - confirm_Alice.py
 - confirm_All_Tasks_mt.py
 - confirm_Blender_90M.py
-- confirm_Blender_400M.py
-Then, Click the "Run" and the "Start Debugging" or the "Run Without Debugging" with one by one.  
+- confirm_Blender_400M.py  
+Then, Click the "Run" and the "Start Debugging" or the "Run Without Debugging" with one by one. 
 If these scripts are not working, please check your setting for system pass. You can set for your system pass in each files.  
 If you want to try the other agents/models in ParlAI, please refer to [Standard Agents in ParlAI Document](https://parl.ai/docs/agents_list.html).  
 
