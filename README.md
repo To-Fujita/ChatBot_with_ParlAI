@@ -13,7 +13,7 @@ This is a chat bot based on the ParlAI by Facebook. You can communicate to some 
 ![ChatBot_000](https://to-fujita.github.io/Images/ChatBot_000.gif "Images for ChatBot")
 
 ## 4. Details
-I have confirmed these Python Scripts on the above conditions only. I will show you below how to execute the P`ython scripts. 
+I have confirmed these Python Scripts on the above conditions only. I will show you below how to execute the Python scripts. 
 ### 4-1. Preparation
 (a) Download & unzip the files
 - [ParlAI](https://github.com/facebookresearch/parlai): A framework for training and evaluating AI models on a variety of openly available dialogue datasets.
