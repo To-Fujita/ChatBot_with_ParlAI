@@ -27,14 +27,14 @@ Please install followings to your Python system.
 - Flask: pip install Flask
 
 ### 4-2. Confirm to work some agents/models in ParlAI
-If you finished the preparation above, please confirm to work some agents/models in ParlAI.  
+If you finished the preparation above, please confirm to work some agents/models in ParlAI. 
 After open the "ChatBot_with_ParlAI" folder, please open the each following files with VS Code.
 - confirm_Alice.py: The ALICE bot is a strong rule-based bot uing AIML.
 - confirm_All_Tasks_mt.py: One of Dodeca models in Zoo, please refer to [Model Zoo](https://parl.ai/docs/zoo.html)
 - confirm_Blender_90M.py: Blended Skill Talk models in Zoo, please refer to [Model Zoo](https://parl.ai/docs/zoo.html)
 - confirm_Blender_400M.py: Large size of Blended Skill Talk models in Zoo.
 
-At the VS Code, Click the "Run" and the "Start Debugging" or the "Run Without Debugging" with one by one. 
+At the VS Code, click the "Run" and the "Start Debugging" or the "Run Without Debugging" with one by one. 
 If these scripts are not working well, please check your setting for system pass. You can set for your system pass in each files.  
 If you want to try the other agents/models in ParlAI, please refer to [Standard Agents in ParlAI Document](https://parl.ai/docs/agents_list.html).  
 
@@ -45,9 +45,9 @@ The Chat Bot programs are as follows.
 - main_Blender_90M.py
 - main_Blender_400M.py
 
-At the VS Code, Click the "Run" and the "Start Debugging" or the "Run Without Debugging" with one by one, again. 
-After open the Browser, please input "http://127.0.0.1:5000", then you can tolk with each agent by keybord and/or voice.  
-
+Open the each file by the VS Code, then click the "Run" and the "Start Debugging" or the "Run Without Debugging". 
+After open the Browser, please input "http://127.0.0.1:5000". Then, you can tolk with each agent by keybord and/or voice.  
+  
 This Chat Bot is created in following concepts.
 - The human interface is given in HTML and Javascript.
 - The answer from the chat bot is created in Python.
