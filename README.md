@@ -16,12 +16,12 @@ This is a chat bot based on the ParlAI by Facebook. You can communicate to some 
 I have confirmed these Python Scripts on the above conditions only. I will show you below how to execute the Python scripts. 
 ### 4-1. Preparation
 (a) Download & unzip the files
+Please download following files and put these unzipped folders under the system pass passed.
 - [ParlAI](https://github.com/facebookresearch/parlai): A framework for training and evaluating AI models on a variety of openly available dialogue datasets.
-- ChatBot_with_ParlAI: Please download from above "Code".
-
-Please put these unzipped folders under the system pass passed.   
+- ChatBot_with_ParlAI: Please download from above "Code". 
   
 (b) Install some files to your Python
+Please install followings to your Python system.
 - ParlAI: pip install parlai
 - Python-Aiml: pip install python-aiml
 - Flask: pip install Flask
