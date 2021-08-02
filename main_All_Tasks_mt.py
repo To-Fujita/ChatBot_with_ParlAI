@@ -1,4 +1,4 @@
-# ChatBot with "ParlAI All Tasks mt" by F. Fujita on 2021/08/01
+# ChatBot with "ParlAI All Tasks mt" by F. Fujita on 2021/08/02
 
 import sys
 sys.path.append('./ParlAI-master/')
@@ -18,6 +18,7 @@ from flask import Flask, render_template, request
 agent = ''
 human_agent = ''
 opt_org = ''
+agent_name = 'All_Tasks_mt'
 
 app = Flask(__name__, static_url_path='/static')
 
@@ -27,9 +28,10 @@ def home():
     return render_template("index_EN.html")
 
 @app.route("/get_Model")
+# Set the Agent Name for HTML
 def select_Model():
     temp_data = request.args.get('sel_Model')
-    return str('All_Tasks_mt')
+    return str(agent_name)
 
 @app.route("/get")
 # Communicate with HTML

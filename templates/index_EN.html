@@ -1,7 +1,7 @@
-<!-- ChatBot HTML with Python Script by T. Fujita on 2021/08/01 -->
+<!-- ChatBot HTML with Python Script ver. 1.1 by T. Fujita on 2021/08/02 -->
 <!DOCTYPE html>
 <html>
-  <title>Index_EN.html for ChatBot by T. Fujita 2021/08/01</title>
+  <title>Index_EN.html for ChatBot by T. Fujita</title>
 
   <head>
     <link rel="icon" type="image/x-icon" href="static/images/favicon.ico" />
@@ -251,19 +251,7 @@
             var selected_model = '';
            
             $.get("/get_Model", { sel_Model: 'Set Model Name' }).done(function( data ) {
-                selected_model = data;
-                if (selected_model == 'All_Tasks_mt') {
-                    model_name.innerHTML = '<span style="position:absolute; top:90px; left:30px; font-size: 20px;">Bot Name: All_Tasks_mt</span>'
-                }
-                else if (selected_model == 'Blender_90M') {
-                    model_name.innerHTML = '<span style="position:absolute; top:90px; left:30px; font-size: 20px;">Bot Name: Blender_90M</span>'
-                }
-                else if (selected_model == 'Blender_400M') {
-                    model_name.innerHTML = '<span style="position:absolute; top:90px; left:30px; font-size: 20px;">Bot Name: Blender_400M</span>'
-                }
-                else {
-                    model_name.innerHTML = '<span style="position:absolute; top:90px; left:30px; font-size: 20px;">Bot Name: Alice</span>'
-                }
+                model_name.innerHTML = '<span style="position:absolute; top:90px; left:30px; font-size: 20px;">Bot Name: ' + data +'</span>'
             }).fail(function(){
                 alert('failed');
             });
