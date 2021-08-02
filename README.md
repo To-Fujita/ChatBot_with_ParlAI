@@ -45,6 +45,9 @@ The Chat Bot programs are as follows.
 - main_Blender_90M.py
 - main_Blender_400M.py
 
+At the VS Code, Click the "Run" and the "Start Debugging" or the "Run Without Debugging" with one by one, again. 
+After open the Browser, please input "http://127.0.0.1:5000", then you can tolk with each agent by keybord and/or voice.  
+
 This Chat Bot is created in following concepts.
 - The human interface is given in HTML and Javascript.
 - The answer from the chat bot is created in Python.
@@ -58,7 +61,8 @@ Please enjoy the communication with the chat bot on the Microsoft Edge or the Go
 - [Python](https://www.python.org/)
 
 ## 6. License
-MIT
+- Programs: MIT
+- All of the images: Please confirm to each author.
 
 ## 7. Author
 [T. Fujita](https://github.com/To-Fujita)
