@@ -45,7 +45,7 @@ The Chat Bot programs are as follows.
 - main_Blender_90M.py
 - main_Blender_400M.py
 
-Open the each file by the VS Code, then click the "Run" and the "Start Debugging" or the "Run Without Debugging". 
+Please open the one of above files by the VS Code, then click the "Run" and the "Start Debugging" or the "Run Without Debugging". 
 After open the Browser, please input "http://127.0.0.1:5000". Then, you can tolk with each agent by keybord and/or voice.  
   
 This Chat Bot is created in following concepts.
