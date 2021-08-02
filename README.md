@@ -32,7 +32,7 @@ After open the "ChatBot_with_ParlAI" folder, please open the each following file
 - confirm_Alice.py: The ALICE bot is a strong rule-based bot uing AIML.
 - confirm_All_Tasks_mt.py: One of Dodeca models in Zoo, please refer to [Model Zoo](https://parl.ai/docs/zoo.html)
 - confirm_Blender_90M.py: Blended Skill Talk models in Zoo, please refer to [Model Zoo](https://parl.ai/docs/zoo.html)
-- confirm_Blender_400M.py
+- confirm_Blender_400M.py: Large size of Blended Skill Talk models in Zoo.
 
 At the VS Code, Click the "Run" and the "Start Debugging" or the "Run Without Debugging" with one by one. 
 If these scripts are not working well, please check your setting for system pass. You can set for your system pass in each files.  
