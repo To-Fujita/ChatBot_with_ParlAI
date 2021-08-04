@@ -35,7 +35,7 @@ After open the "ChatBot_with_ParlAI" folder, please open the each following file
 - confirm_Blender_400M.py: Large size of Blended Skill Talk models in Zoo.
 
 At the VS Code, click the "Run" and the "Start Debugging" or the "Run Without Debugging" with one by one. 
-Wait a few minutes, after display "Enter Your Message: " at the terminal, you can talk with agent in terminal.  
+Wait a few minutes, and after display "Enter Your Message: " at the terminal, you can talk with agent in terminal.  
 If these scripts are not working well, please check your setting for system pass. You can set for your system pass in each files.  
 If you want to try the other agents/models in ParlAI, please refer to [Standard Agents in ParlAI Document](https://parl.ai/docs/agents_list.html).  
 
@@ -47,7 +47,7 @@ The Chat Bot programs are as follows.
 - main_Blender_400M.py
 
 Please open the one of above files by the VS Code, then click the "Run" and the "Start Debugging" or the "Run Without Debugging". 
-Wait a few minutes, it is displaied "* Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)" at the Terminal. 
+Wait a few minutes, it will be displaied "* Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)" at the Terminal. 
 Then, after open the Browser, please input "http://127.0.0.1:5000". You can tolk with each agent by keybord and/or voice.  
   
 This Chat Bot is created in following concepts.
