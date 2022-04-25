@@ -1,4 +1,4 @@
-<!-- ChatBot HTML with Python Script ver. 1.1 by T. Fujita on 2021/08/02 -->
+<!-- ChatBot HTML with Python Script ver. 1.1 by T. Fujita on 2022/04/25 -->
 <!DOCTYPE html>
 <html>
   <title>Index_EN.html for ChatBot by T. Fujita</title>
@@ -54,13 +54,14 @@
                 <li class="nav__submenu-item"> <a href="javascript: Dialog_open_profile()">Profile</a></li>
             </ul>                
         </li>
-        <li class="nav__menu-item"><a>Icon for Bot</a>
+        <li class="nav__menu-item"><a>Options for Bot</a>
             <ul class="nav__submenu">
                 <li class="nav__submenu-item"> <a href="javascript: Dialog_open_botIcon()">Select Icon</a></li>
                 <li class="nav__submenu-item"> <a href="javascript: Dialog_open_botFile()">From File</a></li>
+                <li class="nav__submenu-item"> <a href="javascript: Dialog_open_VoiceOptions()">Voice Options</a></li>
             </ul>
         </li>
-        <li class="nav__menu-item"><a>Icon for User</a>
+        <li class="nav__menu-item"><a>Options for User</a>
             <ul class="nav__submenu">
                 <li class="nav__submenu-item"> <a href="javascript: Dialog_open_userIcon_Boy()">Boy's Icon</a></li>
                 <li class="nav__submenu-item"> <a href="javascript: Dialog_open_userIcon_Girl()">Girl's Icon</a></li>
@@ -214,6 +215,24 @@
     <input type="button" class="rightButton" value=" OK " onclick="Dialog_close_imageFile()">
 </dialog>
 
+<!-- Dialog Box for Voice Options -->
+<dialog dialog id="dialog_VoiceOptions">
+    <center>
+        Dialog（Voice Options）
+    </center>
+    <hr>
+    <center>
+        <select id="voice-select"></select>
+        <br/><br/><br/>
+        <input id="rate" type="range" min="0" max="2" step="0.1" value="1" style="background: #8a2be2;"><font color="black"> (speed: <span id="current-speed" >1.0</span>)</font>
+        <br/><br/><br/>
+        <input id="pitch" type="range" min="0" max="2" step="0.1" value="1" style="background: #7b68ee;"><font color="black"> (pitch : <span id="current-pitch">1.0</span>)</font>
+        <br/>
+    </center>
+    <hr>
+    <input type="button" class="rightButton" value="Close" onclick="Dialog_close_VoiceOptions()">
+</dialog>
+
 <!-- Dialog Box for Dummy -->
 <dialog dialog id="dialog_dummy">
     <center>
@@ -237,14 +256,27 @@
         let image_Flag = 0;
         let File_Input_Title = document.getElementById('image_File');
         const uttr = new SpeechSynthesisUtterance();
+        const voiceSelect = document.querySelector('#voice-select')
+        const speed = document.getElementById('rate')
+        const currentValueElem = document.getElementById('current-speed')
+        const pitch_val = document.getElementById('pitch')
+        const currentPitchElem = document.getElementById('current-pitch')
 
         SpeechRecognition = webkitSpeechRecognition || SpeechRecognition;
         let recognition = new SpeechRecognition();
         recognition.lang = 'en-US';
         recognition.interimResults = false;
         recognition.continuous = true;
-        
 
+        var rangeValue = function (elem, target) {
+            return function(evt) {
+                target.innerHTML = elem.value
+            }
+        }        
+        appendVoices()
+        speed.addEventListener('input', rangeValue(speed, currentValueElem))
+        pitch_val.addEventListener('input', rangeValue(pitch_val, currentPitchElem))
+        
 // Set the ChatBot Name
         $(document).ready(function(){
             var model_name = document.getElementById('Selected_Model');
@@ -304,8 +336,9 @@
           recognition.stop();
           uttr.lang = "en-US"  
           uttr.text = answer;
-          uttr.rate = 1.0;
-          uttr.pitch = 1.0;
+          uttr.rate = speed.value;
+          uttr.pitch = pitch_val.value;
+          uttr.voice = speechSynthesis.getVoices().filter(voice => voice.name === voiceSelect.value) [0]
           speechSynthesis.speak(uttr);
         }
 
@@ -667,6 +700,36 @@
         function Dialog_close_wiki() {
             dialog_wiki.close();
         }
+
+// Voice Options
+function Dialog_open_VoiceOptions() {
+            dialog_menu.close();
+            dialog_VoiceOptions.showModal();
+            Flag_Speech = 0;
+            Speak.innerHTML = '<input type="button" class="normalButton" style="position:absolute; top:60px; left:45%; font-size: 20px; background-color: #ff0000;" value="音声入力 OFF" onclick="OnButtonClick_01();">';
+            recognition.stop();
+            appendVoices()
+        }
+        function Dialog_close_VoiceOptions() {
+            dialog_VoiceOptions.close();
+            speechSynthesis.onvoiceschanged = e => {
+                appendVoices()
+            }
+        }
+        function appendVoices() {
+            const voices = speechSynthesis.getVoices()
+            voiceSelect.innerHTML = ''
+            voices.forEach(voice => {
+            // Select only English
+                if(!voice.lang.match('en-US|en-GB')) return
+                const option = document.createElement('option')
+                option.value = voice.name
+                option.text  = `${voice.name} (${voice.lang})`
+                option.setAttribute('selected', voice.default)
+                voiceSelect.appendChild(option)
+            });
+        }        
+
 
     </script>
   </body>
