@@ -23,7 +23,7 @@ Please download following files and put these unzipped folders under the system 
 (b) Install some libraries to your Python  
 Please install following libraries to your Python system.
 - ParlAI: pip install parlai
-- Python-Aiml: pip install python-aiml
+- Python-Aiml: pip install python-aiml or pip install aiml
 - Flask: pip install Flask
 
 ### 4-2. Confirm to work some agents/models in ParlAI
