@@ -17,7 +17,7 @@ If you want to enjoy conversation in Japanese, please check "[ChatBot_with_GPT-2
 I have confirmed these Python Scripts on the above conditions only. I will show you below how to execute the Python scripts. 
 ### 4-1. Preparation
 (a) Download & unzip the files  
-Please download following files and put these unzipped folders under the system pass passed.
+Please download following files and put these unzipped folders under the system path passed.
 - [ParlAI](https://github.com/facebookresearch/parlai): A framework for training and evaluating AI models on a variety of openly available dialogue datasets.
 - ChatBot_with_ParlAI: Please download from above "Code". 
   
@@ -37,7 +37,7 @@ After open the "ChatBot_with_ParlAI" folder, please open the each following file
 
 At the VS Code, click the "Run" and the "Start Debugging" or the "Run Without Debugging" with one by one. 
 Wait a few minutes, and after display "Enter Your Message: " at the terminal, you can talk with agent in terminal.  
-If these scripts are not working well, please check your setting for system pass. You can set for your system pass in each files.  
+If these scripts are not working well, please check your setting for system pass. You can set for your system path in each files.  
 If you want to try the other agents/models in ParlAI, please refer to [Standard Agents in ParlAI Document](https://parl.ai/docs/agents_list.html).  
 
 ### 4-3. Try to communicate with the chat bot
@@ -49,7 +49,7 @@ The Chat Bot programs are as follows.
 
 Please open the one of above files by the VS Code, then click the "Run" and the "Start Debugging" or the "Run Without Debugging". 
 Wait a few minutes, it will be displaied "* Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)" at the Terminal. 
-Then, after open the Browser, please input "http://127.0.0.1:5000". You can tolk with each agent by keybord and/or voice.  
+Then, after open the Browser, please input "http://127.0.0.1:5000". You can talk with each agent by keybord and/or voice.  
   
 This Chat Bot is created in following concepts.
 - The human interface is given in HTML and Javascript.
