@@ -41,7 +41,7 @@ Wait a few minutes, and after display "Enter Your Message: " at the terminal, yo
 If these scripts are not working well, please check your setting for system path and/or check your Python environment. You can set for your system path in each files.  
 If you want to try the other agents/models in ParlAI, please refer to [Standard Agents in ParlAI Document](https://parl.ai/docs/agents_list.html).  
 
-### 4-3. Try to communicate with the chat bot
+### 4-3. Try to talk with the chat bot
 The Chat Bot programs are as follows. 
 - main_Alice.py
 - main_All_Tasks_mt.py
