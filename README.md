@@ -1,7 +1,7 @@
 # ChatBot_with_ParlAI
 
 ## 1. Description
-This is a chat bot based on the ParlAI by Facebook. You can speak to some chat bots by keyboard and/or voice.  
+This is a chat bot based on the ParlAI by Facebook. You can talk to some chat bots by keyboard and/or voice.  
 If you want to enjoy conversation in Japanese, please check "[ChatBot_with_GPT-2_Rinna](https://github.com/To-Fujita/ChatBot_with_GPT-2_Rinna)".
 
 ## 2. Operational Environment
