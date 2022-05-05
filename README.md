@@ -49,7 +49,7 @@ The Chat Bot programs are as follows.
 - main_Blender_400M.py
 
 Please open the one of above files by the VS Code, then click the "Run" and the "Start Debugging" or the "Run Without Debugging". 
-Wait a few minutes, it will be displaied "* Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)" at the Terminal. 
+Wait a few minutes, it will be displayed "* Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)" at the Terminal. 
 Then, after open the Browser, please input "http://127.0.0.1:5000". You can talk with each agent by keybord and/or voice.  
   
 This Chat Bot is created in following concepts.
