@@ -2,6 +2,7 @@
 
 import sys
 sys.path.append('./ParlAI-master/')
+sys.path.append('./ParlAI-main/')
 
 from parlai.scripts.interactive import Interactive
 
