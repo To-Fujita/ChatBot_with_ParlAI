@@ -38,7 +38,7 @@ After open the "ChatBot_with_ParlAI" folder, please open the each following file
 
 At the VS Code, click the "Run" and the "Start Debugging" or the "Run Without Debugging" with one by one. 
 Wait a few minutes, and after display "Enter Your Message: " at the terminal, you can talk with agent in terminal.  
-If these scripts are not working well, please check your setting for system pass. You can set for your system path in each files.  
+If these scripts are not working well, please check your setting for system path and/or check your Python environment. You can set for your system path in each files.  
 If you want to try the other agents/models in ParlAI, please refer to [Standard Agents in ParlAI Document](https://parl.ai/docs/agents_list.html).  
 
 ### 4-3. Try to communicate with the chat bot
