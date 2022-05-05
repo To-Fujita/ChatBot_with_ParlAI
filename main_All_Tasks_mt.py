@@ -1,7 +1,8 @@
 # ChatBot with "ParlAI All Tasks mt" by F. Fujita on 2021/08/02
 
 import sys
-sys.path.append('./ParlAI-master/')
+#sys.path.append('./ParlAI-master/')
+sys.path.append('./ParlAI-main/')
 
 from parlai.core.params import ParlaiParser
 from parlai.core.agents import create_agent, Agent
