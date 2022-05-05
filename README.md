@@ -23,6 +23,7 @@ Please download following files and put these unzipped folders under the system 
   
 (b) Install some libraries to your Python  
 Please install following libraries to your Python system.
+- Pytorch: pip install torch
 - ParlAI: pip install parlai
 - Python-Aiml: pip install python-aiml or pip install aiml
 - Flask: pip install Flask
