@@ -2,7 +2,7 @@
 
 ## 1. Description
 This is a chat bot based on the ParlAI by Facebook. You can talk to some chat bots by keyboard and/or voice.  
-If you want to enjoy conversation in Japanese, please check "[ChatBot_with_GPT-2_Rinna](https://github.com/To-Fujita/ChatBot_with_GPT-2_Rinna)".
+If you want to enjoy conversation in Japanese, please check "[ChatBot_with_GPT-2_Rinna](https://github.com/To-Fujita/ChatBot_with_GPT-2_Rinna)". The [Japanese_ChatBot_with_ParlAI](https://github.com/To-Fujita/Japanese_ChatBot_with_ParlAI) is also available.
 
 ## 2. Operational Environment
 - Windows 10 64-bit
@@ -63,6 +63,8 @@ Please enjoy the communication with the chat bot on the Microsoft Edge or the Go
 - [Facebookresearch/ParlAI](https://github.com/facebookresearch/parlai)
 - [Visual Studio Code](https://azure.microsoft.com/en-us/products/visual-studio-code/)
 - [Python](https://www.python.org/)
+- [ChatBot_with_GPT-2_Rinna](https://github.com/To-Fujita/ChatBot_with_GPT-2_Rinna)
+- [Japanese_ChatBot_with_ParlAI](https://github.com/To-Fujita/Japanese_ChatBot_with_ParlAI)
 
 ## 6. License
 - Programs: MIT
