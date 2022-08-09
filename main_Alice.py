@@ -2,7 +2,7 @@
 
 import sys
 #sys.path.append('./ParlAI-master/')
-sys.path.append('./ParlAI-main/')
+sys.path.append('./ParlAI-main/')                   # Please set the PATH name according to your environment.
 
 from parlai.core.params import ParlaiParser
 from parlai.core.agents import create_agent, Agent
