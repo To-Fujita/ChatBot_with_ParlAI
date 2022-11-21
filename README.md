@@ -35,6 +35,7 @@ After open the "ChatBot_with_ParlAI" folder, please open the each following file
 - confirm_All_Tasks_mt.py: One of Dodeca models in Zoo, please refer to [Model Zoo](https://parl.ai/docs/zoo.html)
 - confirm_Blender_90M.py: Blended Skill Talk models in Zoo, please refer to [Model Zoo](https://parl.ai/docs/zoo.html)
 - confirm_Blender_400M.py: Large size of Blended Skill Talk models in Zoo.
+- confirm_Blender3_3B.py: Large size of BlenderBot 3 model in zoo. (This is very very slow responce. It takes about 10 minutes to reply.)
 
 At the VS Code, click the "Run" and the "Start Debugging" or the "Run Without Debugging" with one by one. 
 Wait a few minutes, and after display "Enter Your Message: " at the terminal, you can talk with agent in terminal.  
@@ -47,6 +48,7 @@ The Chat Bot programs are as follows.
 - main_All_Tasks_mt.py
 - main_Blender_90M.py
 - main_Blender_400M.py
+- main_Blender3_3B.py (This is very very slow responce. It takes about 10 minutes to reply.)
 
 Please open the one of above files by the VS Code, then click the "Run" and the "Start Debugging" or the "Run Without Debugging". 
 Wait a few minutes, it will be displayed "* Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)" at the Terminal. 
@@ -59,16 +61,20 @@ This Chat Bot is created in following concepts.
 In this time, I used the "Dialog Element" in HTML. The Safari and the FireFox are not supported for the Dialog Element, yet. Then, it is not working well by the Safari and the Firefox.
 Please enjoy the communication with the chat bot on the Microsoft Edge or the Google Chrome.
 
-## 5. Reference
+## 5. History
+2022/5/5: Upload first version.  
+2022/11 21: Add the files "confirm_Blender3_3B.py" and "main_Blender3_3B.py".  
+
+## 6. Reference
 - [Facebookresearch/ParlAI](https://github.com/facebookresearch/parlai)
 - [Visual Studio Code](https://azure.microsoft.com/en-us/products/visual-studio-code/)
 - [Python](https://www.python.org/)
 - [ChatBot_with_GPT-2_Rinna](https://github.com/To-Fujita/ChatBot_with_GPT-2_Rinna)
 - [Japanese_ChatBot_with_ParlAI](https://github.com/To-Fujita/Japanese_ChatBot_with_ParlAI)
 
-## 6. License
+## 7. License
 - Programs: MIT
 - All of the images: Please confirm to each author.
 
-## 7. Author
+## 8. Author
 [T. Fujita](https://github.com/To-Fujita)
