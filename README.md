@@ -62,7 +62,7 @@ In this time, I used the "Dialog Element" in HTML. The Safari and the FireFox ar
 Please enjoy the communication with the chat bot on the Microsoft Edge or the Google Chrome.
 
 ## 5. History
-2022/5/5: Upload first version.  
+2021/5/5: Upload first version.  
 2022/11 21: Add the files "confirm_Blender3_3B.py" and "main_Blender3_3B.py".  
 
 ## 6. Reference
