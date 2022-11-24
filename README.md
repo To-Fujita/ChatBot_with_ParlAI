@@ -35,7 +35,7 @@ After open the "ChatBot_with_ParlAI" folder, please open the each following file
 - confirm_All_Tasks_mt.py: One of Dodeca models in Zoo, please refer to [Model Zoo](https://parl.ai/docs/zoo.html)
 - confirm_Blender_90M.py: Blended Skill Talk models in Zoo, please refer to [Model Zoo](https://parl.ai/docs/zoo.html)
 - confirm_Blender_400M.py: Large size of Blended Skill Talk models in Zoo.
-- confirm_Blender3_3B.py: Large size of BlenderBot 3 model in zoo. (This is very very slow responce. It takes about 10 minutes to reply.)
+- confirm_Blender3_3B.py: Large size of BlenderBot 3 model in zoo. (This is very very slow responce. It takes about 10 minutes to reply on the laptop PC.)
 
 At the VS Code, click the "Run" and the "Start Debugging" or the "Run Without Debugging" with one by one. 
 Wait a few minutes, and after display "Enter Your Message: " at the terminal, you can talk with agent in terminal.  
@@ -48,7 +48,7 @@ The Chat Bot programs are as follows.
 - main_All_Tasks_mt.py
 - main_Blender_90M.py
 - main_Blender_400M.py
-- main_Blender3_3B.py (This is very very slow responce. It takes about 10 minutes to reply.)
+- main_Blender3_3B.py (This is very very slow responce. It also takes about 10 minutes to reply on the laptop PC.)
 
 Please open the one of above files by the VS Code, then click the "Run" and the "Start Debugging" or the "Run Without Debugging". 
 Wait a few minutes, it will be displayed "* Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)" at the Terminal. 
