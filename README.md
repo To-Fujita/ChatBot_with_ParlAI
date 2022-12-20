@@ -65,7 +65,8 @@ Please enjoy the communication with the chat bot on the Microsoft Edge or the Go
 
 ## 5. History
 2021/5/5: Upload first version.  
-2022/11 21: Add the files "confirm_Blender3_3B.py" and "main_Blender3_3B.py".  
+2022/11/21: Add the files "confirm_Blender3_3B.py" and "main_Blender3_3B.py".  
+2022/12/20: Add how to use the "requirements.txt" of downloaded "Parlai".
 
 ## 6. Reference
 - [Facebookresearch/ParlAI](https://github.com/facebookresearch/parlai)
