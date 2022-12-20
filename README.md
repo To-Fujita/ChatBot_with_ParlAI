@@ -28,7 +28,7 @@ Please install following libraries to your Python system.
 - Python-Aiml: pip install python-aiml or pip install aiml
 - Flask: pip install Flask
   
-If you use the "requirements.txt" of downloaded "Parlai", please delete the line of "sh==1.12.14". Because the module of "sh==1.12.14" is for the Linax.
+If you use the "requirements.txt" of downloaded "Parlai", please delete the line of "sh==1.12.14". Because the module of "sh==1.12.14" is for the Linux.
 
 ### 4-2. Confirm to work some agents/models in ParlAI
 If you finished the preparation above, please confirm to work some agents/models in ParlAI. 
